@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Taran Haynes | Network Technician, CCNA</title>
+<meta name="description" content="Network technician with field experience at Cox Communications, finishing CCNA and building hands-on network operations projects. Based in Omaha, NE.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#eef2f4; --surface:#f8fafb; --ink:#14232e; --muted:#4a5c68; --line:#c5d0d6;
+  --accent:#0b6e8a; --accent-ink:#ffffff; --ok:#2e8b57;
+  --head:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  --body:"Source Sans 3","Segoe UI",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#101a21; --surface:#16232c; --ink:#e6eef2; --muted:#9db0ba; --line:#2b3d49;
+    --accent:#5cc0dc; --accent-ink:#0b1a22; --ok:#5fcf8f;
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 18px/1.6 var(--body)}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+
+header{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;flex-wrap:wrap}
+.brand{font:700 19px var(--head);color:var(--ink);text-decoration:none}
+nav a{color:var(--muted);text-decoration:none;margin-left:22px;font-weight:600;font-size:16px}
+nav a:hover{color:var(--ink)}
+
+.hero{padding:72px 0 56px}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.status{display:inline-flex;align-items:center;gap:10px;font-size:16px;color:var(--muted);margin:0 0 20px}
+.status i{width:10px;height:10px;border-radius:50%;background:var(--ok);display:inline-block}
+h1{font:700 clamp(2.4rem,5.5vw,3.8rem)/1.05 var(--head);letter-spacing:-.02em;margin:0 0 20px}
+.lede{color:var(--muted);max-width:34em;margin:0 0 28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 22px;border-radius:6px;font-weight:600;text-decoration:none;border:2px solid var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+.btn.ghost{color:var(--accent)}
+.topo{width:100%;height:auto}
+.topo .node{fill:var(--surface);stroke:var(--ink);stroke-width:2}
+.topo .link{stroke:var(--line);stroke-width:3;fill:none}
+.topo .lbl{font:600 13px var(--body);fill:var(--muted)}
+.topo .pkt{fill:var(--accent)}
+
+section{padding:56px 0;border-top:1px solid var(--line)}
+h2{font:700 1.9rem/1.15 var(--head);letter-spacing:-.01em;margin:0 0 24px}
+.about{max-width:38em}
+.about p{margin:0 0 16px}
+
+.proj{display:grid;grid-template-columns:1fr auto;gap:8px 32px;padding:24px 0;border-bottom:1px solid var(--line)}
+.proj:first-of-type{padding-top:0}
+.proj h3{font:700 1.3rem var(--head);margin:0 0 6px}
+.proj p{margin:0;color:var(--muted);max-width:40em}
+.proj a{align-self:center;font-weight:600;white-space:nowrap}
+.proj.lead{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:28px;margin-bottom:8px}
+
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.role{margin:0 0 24px}
+.role b{display:block;font-family:var(--head);font-size:1.15rem}
+.role span{color:var(--muted);display:block}
+.role p{margin:6px 0 0}
+
+#contact p{max-width:34em;margin:0 0 20px}
+.links a{margin-right:22px;font-weight:600}
+footer{padding:28px 0 40px;color:var(--muted);font-size:15px;border-top:1px solid var(--line)}
+
+@media (max-width:760px){
+  .hero{padding-top:40px}
+  .hero .wrap,.cols{grid-template-columns:1fr}
+  .proj{grid-template-columns:1fr}
+  nav a{margin-left:14px}
+  header .wrap{height:auto;padding-top:10px;padding-bottom:10px;gap:6px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .pkt{display:none}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="#top">Taran Haynes</a>
+    <nav aria-label="Main">
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="resume.pdf">Resume</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <p class="status"><i aria-hidden="true"></i>Open to network operations and technician roles in Omaha, NE</p>
+        <h1>Network technician building toward network operations</h1>
+        <p class="lede">I spent years in the field at Cox Communications installing, troubleshooting, and restoring service for real customers. Now I'm finishing my CCNA and building lab projects that show how I work.</p>
+        <div class="btns">
+          <a class="btn primary" href="#projects">View projects</a>
+          <a class="btn ghost" href="resume.pdf">Download resume</a>
+        </div>
+      </div>
+      <!-- Three-site topology. The dots are packets moving between sites. -->
+      <svg class="topo" viewBox="0 0 360 300" role="img" aria-label="Diagram of three network sites connected by links">
+        <path id="l1" class="link" d="M180 60 L70 220"/>
+        <path id="l2" class="link" d="M180 60 L290 220"/>
+        <path id="l3" class="link" d="M70 220 L290 220"/>
+        <circle class="node" cx="180" cy="60" r="26"/>
+        <circle class="node" cx="70" cy="220" r="26"/>
+        <circle class="node" cx="290" cy="220" r="26"/>
+        <text class="lbl" x="180" y="22" text-anchor="middle">HQ</text>
+        <text class="lbl" x="70" y="266" text-anchor="middle">Branch A</text>
+        <text class="lbl" x="290" y="266" text-anchor="middle">Branch B</text>
+        <circle class="pkt" r="5"><animateMotion dur="4s" repeatCount="indefinite"><mpath href="#l1"/></animateMotion></circle>
+        <circle class="pkt" r="5"><animateMotion dur="5s" begin="1s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#l2"/></animateMotion></circle>
+        <circle class="pkt" r="5"><animateMotion dur="4.5s" begin="2s" repeatCount="indefinite"><mpath href="#l3"/></animateMotion></circle>
+      </svg>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="wrap about">
+      <h2>About</h2>
+      <p>I started in telecom as a field technician, where the job was figuring out what was actually wrong when a customer's service was down, often with limited information and a clock running. That habit of methodical troubleshooting is what drew me to network operations.</p>
+      <p>I'm completing my CCNA coursework and building hands-on projects to go with it. I document how I diagnose problems, because the process matters as much as the fix.</p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <h2>Projects</h2>
+      <div class="proj lead">
+        <div>
+          <h3>Multi-site enterprise network lab</h3>
+          <p>A simulated multi-site network with [VLANs, inter-VLAN routing, OSPF, and site-to-site connectivity: edit to match what you built]. Includes topology diagrams and device configs.</p>
+        </div>
+        <a href="projects/multi-site-lab.html">Read the build</a>
+      </div>
+      <div class="proj">
+        <div>
+          <h3>Python config backup tool</h3>
+          <p>A script that pulls and saves device configurations on a schedule, so changes are tracked and recovery is faster. [Add libraries and device types used.]</p>
+        </div>
+        <a href="https://github.com/[your-username]/[repo-name]">See the code</a>
+      </div>
+      <div class="proj">
+        <div>
+          <h3>Troubleshooting write-ups</h3>
+          <p>A growing series of network issues, each with the symptoms, diagnosis steps, root cause, and fix.</p>
+        </div>
+        <a href="projects/troubleshooting.html">Browse the cases</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap cols">
+      <div>
+        <h2>Experience</h2>
+        <div class="role">
+          <b>Cox Communications</b>
+          <span>Field Technician, [years]</span>
+          <p>Installed and troubleshot [residential / commercial] network and telecom services. [Add one concrete result or the kind of problem you handled most.]</p>
+        </div>
+      </div>
+      <div>
+        <h2>Certifications</h2>
+        <div class="role">
+          <b>CCNA</b>
+          <span>Coursework nearly complete</span>
+          <p>Exam planned for [month, year].</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <h2>Contact</h2>
+      <p>Hiring for a network operations or technician role? I'd like to hear from you.</p>
+      <div class="links">
+        <a href="mailto:[your-email]">[your-email]</a>
+        <a href="https://www.linkedin.com/in/[your-profile]">LinkedIn</a>
+        <a href="https://github.com/[your-username]">GitHub</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">&copy; 2026 Taran Haynes</div>
+</footer>
+</body>
+</html>
